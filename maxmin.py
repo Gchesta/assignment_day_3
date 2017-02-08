@@ -4,7 +4,7 @@ def find_max_min(list_of_nums):
   list_of_nums"""
   
   if max(list_of_nums) == min(list_of_nums): #for a list with identical numbers
-    return list_of_nums[0]
+    return [len(list_of_nums)]
   
   else:
     return [min(list_of_nums), max(list_of_nums)]
