@@ -20,7 +20,7 @@ def find_exchange_rate():
 	print(exchange_rate["rates"])
 	converted_amount = amount * exchange_rate
 	
-	return curr1 + str(amount) + " converts to " + curr1 + str(converted_amount)"""
+	return curr1 + str(amount) + " converts to " + curr1 + str(converted_amount)
 
 
 	
