@@ -16,11 +16,13 @@ def find_exchange_rate():
 	
 	api_url = ("http://api.fixer.io/latest?symbols=%s,%s") % (curr1, curr2)
 	r = Request(api_url)
-	exchange_rate = json.loads(urlopen(r).read())
-	print(exchange_rate["rates"])
+	exchange_rate_json = json.loads(urlopen(r).read())
+	exchange_rate = exchange_rate_json["rates"][curr2]
 	converted_amount = amount * exchange_rate
 	
-	return curr1 + str(amount) + " converts to " + curr1 + str(converted_amount)
+	return curr1 + str(amount) + " converts to " + curr2 + str(converted_amount)
+
+find_exchange_rate()
 
 
 	
